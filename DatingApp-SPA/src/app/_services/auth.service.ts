@@ -8,12 +8,12 @@ import { environment } from '../../environments/environment';
 })
 export class AuthService {
 
-//baseUrl: 'http://localhost:5000/api/auth/';
+// baseUrl: 'http://localhost:5000/api/auth/';
 
 constructor(private http: HttpClient) { }
 
 login(model: any) {
-  console.log(this.baseUrl);
+  // console.log(this.baseUrl);
   return this.http.post('http://localhost:5000/api/auth/login',  model).pipe(
     map((response: any) => {
       // response is the token object
