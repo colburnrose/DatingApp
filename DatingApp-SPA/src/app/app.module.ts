@@ -11,7 +11,7 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider, ErrorInterceptor } from './_services/error.interceptor';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MembersComponent } from './members/members.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
@@ -23,7 +23,7 @@ import { appRoutes } from './routes';
       NavComponent,
       HomeComponent,
       RegisterComponent,
-      MemberListComponent,
+      MembersComponent,
       ListsComponent,
       MessagesComponent
    ],
