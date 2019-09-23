@@ -15,6 +15,7 @@ import { MembersComponent } from './members/members.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
@@ -25,14 +26,15 @@ import { appRoutes } from './routes';
       RegisterComponent,
       MembersComponent,
       ListsComponent,
-      MessagesComponent
+      MessagesComponent,
+      InfoComponent
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
       FormsModule,
       BsDropdownModule.forRoot(),
-      RouterModule.forRoot(appRoutes),
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,
