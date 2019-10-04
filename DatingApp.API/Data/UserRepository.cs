@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DatingApp.API.Models;
@@ -28,9 +29,16 @@ namespace DatingApp.API.Data
             return user;
         }
 
+        public async Task<Photo> GetUserPhotoById(int id)
+        {
+            var photo = await _context.Photos.Include(p => p.Url).FirstOrDefaultAsync(p => p.Id == id);
+            return photo;
+        }
+
         public async Task<IEnumerable<User>> GetUsers()
         {
             var users = await _context.Users.Include(p => p.Photos).ToListAsync();
+     
             return users;
         }
 
